@@ -1,0 +1,64 @@
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #C19875;
+    height: 50px
+}
+
+
+#title{
+    float: left;
+    display: block;
+    color: white;
+    text-align: right;
+    font-size: 20px;
+    text-decoration: none;
+    padding-top: 10px;
+    padding-left: 10px;
+    font-weight: bold;
+    font-style: italic; 
+}
+
+nav a {
+    float: right;
+    display: block;
+    color: white;
+    text-align: right;
+    padding: 12px 12px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #7B3F00; /* Light blue on hover */
+    color: black;
+}
+  
+
+
+
+body{
+    background-color: #7B3F00;
+    font-family: 'Bree Serif', serif;
+    
+}
+#header{
+    text-align: center;
+    margin-top: 70px;
+    font-size: 70px;
+    color: #C19875;
+}
+.parallax{
+    /* The image used */
+  background-image: url("190708110935-black-travel-movement-travel-noire-image4.jpg");
+
+  /* Set a specific height */
+  min-height: 500px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
