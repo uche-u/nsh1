@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book Black</title>
+<link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="dashboard.css">
+<style>
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  .dropdown-content a:hover {background-color: #f1f1f1;}
+  .dropdown:hover .dropdown-content {display: block;}
+  #result {
+    margin-top: 20px;
+  }
+  body{
+    color: white;
+  }
+</style>
+</head>
+<body>
+<h1>Country Prices</h1>
+<div class="dropdown">
+  <button>Sort Prices</button>
+  <div class="dropdown-content">
+    <a href="#" onclick="sortCountries('cheapest')">Cheapest to Most Expensive</a>
+    <a href="#" onclick="sortCountries('expensive')">Most Expensive to Cheapest</a>
+  </div>
+</div>
+
+<h3>This is for a week's budget in said country:</h3>
+<div id="result"></div>
+
+<script>
+const countries = [
+  { name: "Italy", cost: 2500 },
+  { name: "France", cost: 2500 },
+  { name: "Jamaica", cost: 2000 },
+  { name: "China", cost: 2500 },
+  { name: "Japan", cost: 3000 },
+  { name: "India", cost: 2000},
+  { name: "Nigeria", cost: 2500 },
+  { name: "Ghana", cost: 2500 },
+  { name: "Mexico", cost: 2000 },
+  { name: "Argentina", cost: 2500 },
+  { name: "South Korea", cost: 2500 },
+  { name: "Netherlands", cost: 3000 },
+  { name: "Spain", cost: 2500 },
+  { name: "Iceland", cost: 3500 },
+  { name: "Egypt", cost: 2500 }
+];
+
+function sortCountries(order) {
+  const sortedCountries = countries.sort((a, b) => {
+    return order === 'cheapest' ? a.cost - b.cost : b.cost - a.cost;
+  });
+  displayCountries(sortedCountries);
+}
+
+function displayCountries(countries) {
+  const result = document.getElementById('result');
+  result.innerHTML = countries.map(country => 
+    `<h4>${country.name}</h4><p>$${country.cost} (This is for a week's budget in said country)</p>`
+  ).join('');
+}
+</script>
+
+</body>
+</html>

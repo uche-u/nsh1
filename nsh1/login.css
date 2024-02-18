@@ -1,0 +1,142 @@
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #C19875;
+    height: 50px
+}
+
+
+#title{
+    float: left;
+    display: block;
+    color: white;
+    text-align: right;
+    font-size: 20px;
+    text-decoration: none;
+    padding-top: 10px;
+    padding-left: 10px;
+    font-weight: bold;
+    font-style: italic; 
+}
+
+nav a {
+    float: right;
+    display: block;
+    color: white;
+    text-align: right;
+    padding: 12px 12px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #7B3F00; /* Light blue on hover */
+    color: black;
+}
+body{
+    background-color: #7B3F00;
+    font-family: 'Bree Serif', serif;
+    
+}
+
+fieldset {
+    padding-top: 2em;
+    border: 0;
+    margin-left: 19.5em; 
+    font-size: 1.5em;
+} 
+  
+.value {
+    margin: 0 0 0.5em 0;
+}
+  
+#save {
+  font-family: 'Bree Serif', serif;  
+  margin-left: 1em;
+  background-color: #7B3F00;
+  border: 2px solid #C19875; 
+  box-shadow: none;
+  color: white; 
+  font-size: 1.5rem;
+  border-radius: .5em;
+  padding: 10px;
+  width: 250px;
+}
+
+#save:hover {
+  background-color: black;
+}
+
+.formData {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+input[type="text"],
+input[type="password"],
+#save {
+  width: 80%;
+  margin: 10px 0; 
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 80%;
+  height: 20px;
+  margin: 10px 0; 
+}
+
+
+
+
+.loginContainer {
+    display: flex;
+  margin-top: -50px;
+  position: absolute;
+  top: 50%; 
+  right: 15%; 
+  transform: translateY(-50%); 
+  width: 30%; 
+  background-color: #C19875; 
+  padding: 20px; 
+  border-radius: 10px;
+}
+
+#logo{
+    width: 300px;
+    height: 300px;
+    margin-top: 40px;
+    margin-left: 120px;
+    border-radius: 10%;
+
+}
+
+
+
+#formToggle {
+  display: flex;
+  align-items: center; 
+}
+
+#formToggle button {
+  background-color: transparent;
+  color: #e0e0e0; 
+  border: none;
+  padding: 10px 20px; 
+  cursor: pointer; 
+  font-family: 'Merriweather', serif;
+  font-size: 16px; 
+}
+
+#formToggle button:hover {
+  background-color: transparent; 
+  color: #D571E4;
+}
+
+#loginForm{
+    padding-right: 0px;
+}
